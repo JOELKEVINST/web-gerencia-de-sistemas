@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tareas - 8 Semanas</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f4f4f9;
+    }
+
+    header {
+      background: #005f99;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 12px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    main {
+      padding: 30px;
+    }
+
+    .contenedor {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .semana {
+      position: relative;
+      padding: 60px 20px;
+      border-radius: 15px;
+      text-align: center;
+      color: white;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .semana::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 15px;
+      z-index: 0;
+    }
+
+    .semana h3, .archivos, .botones {
+      position: relative;
+      z-index: 1;
+    }
+
+    .semana h3 {
+      margin: 0;
+      font-size: 1.3em;
+      color: #fff;
+    }
+
+    /* Al hacer clic se agranda */
+    .semana.activa {
+      transform: scale(1.08);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      padding-bottom: 30px;
+    }
+
+    .archivos {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      margin-top: 15px;
+    }
+
+    .semana.activa .archivos {
+      display: block;
+      opacity: 1;
+    }
+
+    .btn {
+      background: #0078d7;
+      color: white;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      margin: 4px;
+      display: inline-block;
+      font-size: 0.9em;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      background: #005fa3;
+    }
+
+    .btn.descargar {
+      background: #28a745;
+    }
+
+    .btn.descargar:hover {
+      background: #1e7e34;
+    }
+
+    .actividad {
+      background: rgba(255,255,255,0.9);
+      color: #000;
+      border-radius: 8px;
+      padding: 10px;
+      margin: 8px auto;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
+
+    .botones {
+      margin-top: 10px;
+    }
+
+    .botones a {
+      background: #24292e;
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .botones a:hover {
+      background: #000;
+    }
+
+    /* Imágenes de fondo */
+    .semana:nth-child(1) { background-image: url(''); }
+    .semana:nth-child(2) { background-image: url(''); }
+    .semana:nth-child(3) { background-image: url(''); }
+    .semana:nth-child(4) { background-image: url(''); }
+    .semana:nth-child(5) { background-image: url(''); }
+    .semana:nth-child(6) { background-image: url(''); }
+    .semana:nth-child(7) { background-image: url(''); }
+    .semana:nth-child(8) { background-image: url(''); }
+    .semana:nth-child(9) { background-image: url(''); }
+      .semana:nth-child(10) { background-image: url(''); }
+    .semana:nth-child(11) { background-image: url(''); }
+    .semana:nth-child(12) { background-image: url(''); }
+    .semana:nth-child(13) { background-image: url(''); }
+    .semana:nth-child(14) { background-image: url(''); }
+    .semana:nth-child(15) { background-image: url(''); }
+    .semana:nth-child(16) { background-image: url(''); }
+  </style>
+</head>
+<body>
+  <header><h1>📘 Mis Tareas</h1></header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="sobre.html">Sobre mí</a>
+    <a href="tareas.html">Semanas</a>
+  </nav>
+
+  <main>
+    <h2>Semanas disponibles</h2>
+    <div class="contenedor">
+
+     <!-- 🔹 Semana 1 -->
+<div class="semana" onclick="toggleSemana(this)">
+  <h3>Semana 1</h3>
+
+  <div class="botones">
+    <a href="https://github.com/JOELKEVINST/Base-datos/tree/main/semana1" target="_blank">Ver en GitHub</a>
+  </div>
+
+  <div class="archivos">
+    <div class="actividad">
+      <strong>Actividad 1:</strong> libro<br>
+      <a href="semana1/libro.pdf" target="_blank" class="btn ver">Ver</a>
+      <a href="semana1/libro.pdf" download class="btn descargar">Descargar</a>
+    </div>
+
+    <div class="actividad">
+      <strong>Actividad 2:</strong> pdf<br>
+      <a href="semana1/81932703.pdf" target="_blank" class="btn ver">Ver</a>
+      <a href="semana1/81932703.pdf" download class="btn descargar">Descargar</a>
+    </div>
+    <div class="actividad">
+      <strong>Actividad 3:</strong> sistemas de información<br>
+      <a href="semana1/trabajo.pdf" target="_blank" class="btn ver">Ver</a>
+      <a href="semana1/trabajo.pdf" download class="btn descargar">Descargar</a>
+
+        <br><br>
+      <!-- 🔹 VIDEO -->
+      <a href="https://youtu.be/5ruQW6yTXVY?si=yCiUqxCnvcmIUEg3https://youtu.be/5ruQW6yTXVY?si=yCiUqxCnvcmIUEg3" target="_blank" class="btn ver">Ver Video</a>
+    </div>
+  </div>
+</div>
+
+
+      <!-- 🔹 Semana 2 -->
+      <div class="semana" onclick="toggleSemana(this)">
+        <h3>Semana 2</h3>
+
+        <div class="botones">
+          <a href="https://github.com/JOELKEVINST/Base-datos/tree/main/semana2" target="_blank">Ver en GitHub</a>
+        </div>
+
+        <div class="archivos">
+          <div class="actividad">
+            <strong>Actividad 1:</strong> despliegue en la nube <br>
+            <a href="semana2/trabajo2.pdf" target="_blank" class="btn ver">Ver</a>
+            <a href="semana2/trabajo2.pdf" download class="btn descargar">Descargar</a>
+            <br><br>
+      <!-- 🔹 VIDEO -->
+      <a href="https://youtu.be/tVbniAqMEPs?si=GshnBcWudosE-3o-" target="_blank" class="btn ver">Ver Video</a>
+          </div>
+          <div class="actividad">
+            <strong>Actividad 3:</strong> computació en la nube <br>
+            <a href="semana2/compnube.pdf" target="_blank" class="btn ver">Ver</a>
+            <a href="semana2/compnube.pdf" download class="btn descargar">Descargar</a>
+          </div>
+           <div class="actividad">
+            <strong>Actividad 4:</strong> pdf <br>
+            <a href="semana2/desplieguenube.pdf" target="_blank" class="btn ver">Ver</a>
+            <a href="semana2/desplieguenube.pdf" download class="btn descargar">Descargar</a>
+          </div>
+           <div class="actividad">
+            <strong>Actividad 5:</strong> pdf <br>
+            <a href="semana2/nube.pdf" target="_blank" class="btn ver">Ver</a>
+            <a href="semana2/nube.pdf" download class="btn descargar">Descargar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🔹 Semana 3 -->
+      <div class="semana" onclick="toggleSemana(this)">
+        <h3>Semana 3</h3>
+
+        <div class="botones">
+          <a href="https://github.com/JOELKEVINST/Base-datos/tree/main/semana3" target="_blank">Ver en GitHub</a>
+        </div>
+
+        <div class="archivos">
+          <div class="actividad">
+            <strong>Actividad:1</strong> administración en la nube <br>
+            <a href="semana3/admnube.pdf" target="_blank" class="btn ver">Ver</a>
+            <a href="semana3/admnube.pdf" download class="btn descargar">Descargar</a>
+              <br><br>
+      <!-- 🔹 VIDEO -->
+      <a href="https://es.linkedin.com/learning/fundamentos-de-la-carrera-de-administracion-de-sistemas-de-microsoft-y-linkedin/que-es-la-administracion-en-la-nube" target="_blank" class="btn ver">Ver Video</a>
+          </div>
+          <div class="actividad">
+            <strong>Actividad:2</strong> fuciones y tecnologia<br>
+            <a href="semana3/trabajo3.pdf" target="_blank" class="btn ver">Ver</a>
+            <a href="semana3/trabajo3.pdf" download class="btn descargar">Descargar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🔹 Semana 4 -->
+      <div class="semana" onclick="toggleSemana(this)">
+        <h3>Semana 4</h3>
+
+        <div class="botones">
+          <a href="https://github.com/JOELKEVINST/Base-datos/tree/main/semana4" target="_blank">Ver en GitHub</a>
+        </div>
+
+        <div class="archivos">
+          <div class="actividad">
+            <strong>Actividad:1</strong>Infraestructura de TI<br>
+            <a href="semana4/TI.pdf" target="_blank" class="btn ver">Ver</a>
+            <a href="semana4/TI.pdf" download class="btn descargar">Descargar</a>
+             <br><br>
+      <!-- 🔹 VIDEO -->
+      <a href="https://youtu.be/lgF3Kc-QCMQ?si=uyihuP_ZoqYiYADs" target="_blank" class="btn ver">Ver Video</a>
+          </div>
+          <div class="actividad">
+            <strong>Actividad:2</strong>tipos Infraestructura de TI<br>
+            <a href="semana4/tipos.pdf" target="_blank" class="btn ver">Ver</a>
+            <a href="semana4/tipos.pdf" download class="btn descargar">Descargar</a>
+          </div>
+          <div class="actividad">
+            <strong>Actividad:3</strong>pdf<br>
+            <a href="semana4/semana4.pdf" target="_blank" class="btn ver">Ver</a>
+            <a href="semana4/semana4.pdf" download class="btn descargar">Descargar</a>
+          </div>
+        </div>
+      </div>
+      <!-- 🔹 Semana 5 -->
+<div class="semana" onclick="toggleSemana(this)">
+  <h3>Semana 5</h3>
+
+  <div class="botones">
+    <a href="https://github.com/JOELKEVINST/Base-datos/tree/main/semana5" target="_blank">Ver en GitHub</a>
+  </div>
+
+  <div class="archivos">
+
+    <div class="actividad">
+      <strong>Actividad:1</strong> sistemas de información <br>
+      <a href="semana5/sistinfo.pdf" target="_blank" class="btn ver">Ver</a>
+      <a href="semana5/sistinfo.pdf" download class="btn descargar">Descargar</a>
+
+      <br><br>
+      <!-- 🔹 VIDEO -->
+      <a href="https://youtu.be/-RuFJPOnqv4?si=8dW4F-w79DlvKUtR" target="_blank" class="btn ver">Ver Video</a>
+    </div>
+    <div class="actividad">
+      <strong>Actividad:2</strong> inteligencia de negicos <br>
+      <a href="semana5/integocios.pdf" target="_blank" class="btn ver">Ver</a>
+      <a href="semana5/integocios.pdf" download class="btn descargar">Descargar</a>
+
+      <br><br>
+      <!-- 🔹 VIDEO -->
+      <a href="https://youtu.be/e5GFnvrUugU?si=o8nI4BAHemfIyIJG" target="_blank" class="btn ver">Ver Video</a>
+    </div><div class="actividad">
+      <strong>Actividad:3</strong> pdf <br>
+      <a href="semana5/trabajo5.pdf" target="_blank" class="btn ver">Ver</a>
+      <a href="semana5/trabajo5.pdf" download class="btn descargar">Descargar</a>
+    </div>
+  </div>
+</div>
+    </div>
+  </main>
+
+  <script>
+    function toggleSemana(elemento) {
+      const activa = document.querySelector('.semana.activa');
+      if (activa && activa !== elemento) {
+        activa.classList.remove('activa');
+      }
+      elemento.classList.toggle('activa');
+    }
+  </script>
+</body>
+</html>
